@@ -1,0 +1,104 @@
+/* Style général pour le conteneur */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre de la section */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  /* Styles pour le sélecteur de tri et de filtre */
+  select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style des boutons */
+  button {
+    padding: 6px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Style des tâches */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  li strong {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  li em {
+    color: #888;
+    font-style: normal;
+    font-size: 14px;
+  }
+  
+  /* Styles pour le formulaire d'ajout et d'édition */
+  input[type="text"],
+  select {
+    padding: 6px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Boutons de sauvegarde et annulation */
+  button.save-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button.save-btn:hover {
+    background-color: #218838;
+  }
+  
+  button.cancel-btn:hover {
+    background-color: #c82333;
+  }
+  

@@ -1,0 +1,44 @@
+<div>
+  <h2>Liste des Tâches</h2>
+
+  <!-- Sélecteur de statut lors de l'ajout de tâche -->
+
+  <select [(ngModel)]="selectedStatus" (change)="filterTasks()">
+    <option value="">Toutes les tâches</option>
+    <option *ngFor="let status of taskStatuses" [value]="status">{{ status }}</option>
+  </select>
+  
+
+  <!-- Sélecteur de tri -->
+  <select [(ngModel)]="sortCriteria" (change)="sortTasks()">
+    <option value="">-- Trier par --</option>
+    <option value="title">Titre</option>
+    <option value="status">Statut</option>
+  </select>
+
+  <ul>
+    <li *ngFor="let task of filteredTasks; let index = index">
+      <strong>{{ task.title }}</strong>: {{ task.description }} - <em>{{ task.status }}</em>
+      <button (click)="deleteTask(index)">Supprimer</button>
+      <button (click)="startEditTask(index)">Modifier</button>
+
+      <div *ngIf="editIndex === index">
+        <input [(ngModel)]="editTaskTitle" placeholder="Titre" />
+        <input [(ngModel)]="editTaskDescription" placeholder="Description" />
+
+        <!-- Sélecteur de statut lors de la modification de tâche -->
+        <select [(ngModel)]="editTaskStatus">
+          <option *ngFor="let status of taskStatuses" [value]="status">{{ status }}</option>
+        </select>
+
+        <button (click)="updateTask(index)">Sauvegarder</button>
+        <button (click)="cancelEdit()">Annuler</button>
+      </div>
+    </li>
+  </ul>
+
+  <h3>Ajouter une nouvelle tâche</h3>
+  <input type="text" placeholder="Titre" [(ngModel)]="newTaskTitle" />
+  <input type="text" placeholder="Description" [(ngModel)]="newTaskDescription" />
+  <button (click)="addTask()">Ajouter</button>
+</div>

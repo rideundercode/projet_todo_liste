@@ -1,0 +1,18 @@
+image: maven:3.8.7-eclipse-temurin-17
+
+stages:
+  - build
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - mvn clean install
+  artifacts:
+    paths:
+      - target/*.jar
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Déploiement en cours..."
