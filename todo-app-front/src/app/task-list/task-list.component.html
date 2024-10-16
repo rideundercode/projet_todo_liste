@@ -7,7 +7,7 @@
     <option value="">Toutes les tâches</option>
     <option *ngFor="let status of taskStatuses" [value]="status">{{ status }}</option>
   </select>
-  
+
 
   <!-- Sélecteur de tri -->
   <select [(ngModel)]="sortCriteria" (change)="sortTasks()">

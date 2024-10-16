@@ -1,104 +1,177 @@
 /* Style général pour le conteneur */
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Titre de la section */
-  h2 {
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de la section */
+h2 {
     text-align: center;
     color: #333;
-    margin-bottom: 10px;
-    font-size: 24px;
-  }
-  
-  /* Styles pour le sélecteur de tri et de filtre */
-  select {
-    padding: 8px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Style des sélecteurs */
+select {
+    padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  /* Style des boutons */
-  button {
-    padding: 6px 10px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    border-color: #007bff;
+}
+
+/* Style des boutons */
+button {
+    padding: 10px 15px;
     margin: 0 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Style des tâches */
-  ul {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles des boutons pour sauvegarder et annuler */
+button.save-btn {
+    background-color: #28a745;
+}
+
+button.cancel-btn {
+    background-color: #dc3545;
+}
+
+button.save-btn:hover {
+    background-color: #218838;
+}
+
+button.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+/* Style des tâches */
+ul {
     list-style: none;
     padding: 0;
-  }
-  
-  li {
+    margin-top: 20px;
+}
+
+li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 15px;
+    margin: 10px 0;
     background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  li strong {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
     color: #333;
-    font-size: 16px;
-  }
-  
-  li em {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+li em {
     color: #888;
     font-style: normal;
     font-size: 14px;
-  }
-  
-  /* Styles pour le formulaire d'ajout et d'édition */
-  input[type="text"],
-  select {
-    padding: 6px;
+    margin-left: 10px;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+select {
+    padding: 10px;
     margin-right: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: calc(100% - 20px);
-  }
-  
-  input[type="text"]:focus,
-  select:focus {
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
     border-color: #007bff;
     outline: none;
-  }
-  
-  /* Boutons de sauvegarde et annulation */
-  button.save-btn {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  button.cancel-btn {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  button.save-btn:hover {
-    background-color: #218838;
-  }
-  
-  button.cancel-btn:hover {
-    background-color: #c82333;
-  }
-  
+}
+
+/* Amélioration de la section d'édition */
+.edit-task {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-task input,
+.edit-task select {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.edit-task button {
+    margin: 5px 0;
+}
+
+/* Section d'ajout de tâche */
+h3 {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007bff;
+}
+
+form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
